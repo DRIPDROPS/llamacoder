@@ -22,6 +22,8 @@ import UploadIcon from "@/components/icons/upload-icon";
 import { XCircleIcon } from "@heroicons/react/20/solid";
 import { MODELS, SUGGESTED_PROMPTS } from "@/lib/constants";
 
+export const runtime = "nodejs";
+
 export default function Home() {
   const { setStreamPromise } = use(Context);
   const router = useRouter();
@@ -413,5 +415,4 @@ function LoadingMessage({
   );
 }
 
-export const runtime = "edge";
 export const maxDuration = 45;

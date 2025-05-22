@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { getPrisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { cache } from "react";
@@ -27,5 +29,4 @@ const getChatById = cache(async (id: string) => {
 export type Chat = NonNullable<Awaited<ReturnType<typeof getChatById>>>;
 export type Message = Chat["messages"][number];
 
-export const runtime = "edge";
 export const maxDuration = 45;

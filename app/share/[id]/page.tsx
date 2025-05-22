@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { cache } from "react";
